@@ -1,7 +1,7 @@
 # GroupProject
-# Project 1 - *Name of App Here*
+# Project 1 - *MovieTime*
 
-**Name of your app** is a movies app using the [Fandango].
+**MovieTime** is a movies app using the [Fandango].
 
 Time spent: **X** hours spent in total
 
