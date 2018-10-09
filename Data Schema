@@ -32,8 +32,8 @@ and map view controller to find the nearby people who sell the tickets.
 What will your final demo look like?
 Describe the flow of your final demo
 
-First, click the app icon on the iPhone screen with pop up an app logo. Then, the list movie view 
-controller will appear first. Second, users can click each list to view the details about the tickets. 
+First, click the app icon on the iPhone screen with pop up an app logo. Then, the list of people who want to sell 
+or buy ticket will appear first. Second, users can click each list to view the details about the tickets. 
 Third, users can use chat room to talk about the seller about the tickets information like where they 
 can pick up. Four, users can see their account in profile view controller. Finally, users can find the 
 nearby theaters according to the their location to enjoy their movies. 
