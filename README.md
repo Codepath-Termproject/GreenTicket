@@ -10,13 +10,13 @@ Time spent: **X** hours spent in total
 The following **required** user stories are complete:
 
 - [ ] User sees app icon in home screen and styled launch screen 
-- [ ] User can scroll through a list of movies currently playing in theaters from Fandango 
-- [ ] User can "Pull to refresh" the movie list 
-- [ ] User sees the location of each theaters
-- [ ] User can search for a movie 
-- [ ] User can check the time and the price of the movies 
-- [ ] User can check the most popular movie
+- [ ] User can scroll through a list of people who want to sell or buy tickets
+- [ ] User can "Pull to refresh" the list of ticket
+- [ ] User sees the location of each ticket
+- [ ] User can search for other type of ticket 
+- [ ] User can check the price of the ticket people offer 
 - [ ] User sees an alert when there's a networking error 
+- [ ] User can communicate with other users to talk about buying ticket or selling ticket
 
 
 
