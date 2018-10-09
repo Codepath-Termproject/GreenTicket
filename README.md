@@ -1,7 +1,7 @@
 # GroupProject
-# Project 1 - *MovieTime*
+# Project 1 - *GreenTicket*
 
-**MovieTime** is a movies app using the [Fandango].
+**GreenTicket** is a movies app using the [Fandango].
 
 Time spent: **X** hours spent in total
 
@@ -24,7 +24,7 @@ The following **required** user stories are complete:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/N6kY6Tj.png?.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/ozf1Fpv.png?.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
