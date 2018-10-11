@@ -50,22 +50,22 @@ Describe any challenges encountered while building the app.
 ## considerations
 
   What is your product pitch? Start with a problem statement and follow up with a solution.Focus on engaging your audience with a relatable need.
-  Selling has become more popular in recent years, and people can buy and sell from various App. Our product – Green ticket is for some people who want to exchange their extra tickets. Although it doesn’t have features to provide certain people with a better, people can get cheaper tickets and convenient experiences to be more environmentally friendly. 
+  - Selling has become more popular in recent years, and people can buy and sell from various App. Our product – Green ticket is for some people who want to exchange their extra tickets. Although it doesn’t have features to provide certain people with a better, people can get cheaper tickets and convenient experiences to be more environmentally friendly. 
 
   Who are the key stakeholders for this app? Who will be using this? What will they be using this for?
-  Some people who want to buy the tickets when it is sold out online. Some people who want to sell the useless tickets but valid when they can't attend the event. They will find the tickets through our App to enjoy their event. 
+  - Some people who want to buy the tickets when it is sold out online. Some people who want to sell the useless tickets but valid when they can't attend the event. They will find the tickets through our App to enjoy their event. 
 
   What are the core flows? What are the key functions? What screens will each user see?
-  when the users register and open the App, they will find the list of selling tickets or people who looking for tickets, so users can chat with the people who want to sell or buy the tickets. We provide the chat room for them, and they can decide where they want to exchange their tickets or how to exchange tickets. Each user will see at least 4 screens which are list movie view controller, chat room view controller, profile view controller, and map view controller to find the nearby people who sell the tickets. 
+  - when the users register and open the App, they will find the list of selling tickets or people who looking for tickets, so users can chat with the people who want to sell or buy the tickets. We provide the chat room for them, and they can decide where they want to exchange their tickets or how to exchange tickets. Each user will see at least 4 screens which are list movie view controller, chat room view controller, profile view controller, and map view controller to find the nearby people who sell the tickets. 
 
   What will your final demo look like? Describe the flow of your final demo
-  First, click the app icon on the iPhone screen with pop up an app logo. Then, the list of people who want to sell or buy ticket will appear first. Second, users can click each list to view the details about the tickets. Third, users can use chat room to talk about the seller about the tickets information like where they can pick up. Four, users can see their account in profile view controller. Finally, users can find the nearby theaters according to the their location to enjoy their movies. 
+  - First, click the app icon on the iPhone screen with pop up an app logo. Then, the list of people who want to sell or buy ticket will appear first. Second, users can click each list to view the details about the tickets. Third, users can use chat room to talk about the seller about the tickets information like where they can pick up. Four, users can see their account in profile view controller. Finally, users can find the nearby theaters according to the their location to enjoy their movies. 
   
   What mobile features do you leverage? Leverage at least two mobile-oriented features (i.e. maps and camera)
-  Map – to show the nearby theaters; Camera – take photo about tickets to let buyer know how many tickets you have.
+  - Map – to show the nearby theaters; Camera – take photo about tickets to let buyer know how many tickets you have.
 
   What are your technical concerns? What technical features do you need help or resources for? 
-  Map, Camera
+  - Map, Camera
 
 ## License
 
