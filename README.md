@@ -1,5 +1,5 @@
 # GroupProject
-# Project 1 - *GreenTicket*
+# Term Project - *GreenTicket*
 
 **GreenTicket** is a movies app using the [Fandango].
 
