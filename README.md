@@ -66,6 +66,10 @@ Describe any challenges encountered while building the app.
 
   What are your technical concerns? What technical features do you need help or resources for? 
   - Map, Camera
+  
+## Server
+    
+   server = "https://obscure-garden-54789.herokuapp.com/parse"
 
 ## License
 
