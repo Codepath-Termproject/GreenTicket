@@ -1,0 +1,45 @@
+//
+//  HomeViewController.swift
+//  GroupProject
+//
+//  Created by SiuChun Kung on 10/17/18.
+//  Copyright © 2018 SiuChun Kung. All rights reserved.
+//
+
+import UIKit
+import Parse
+import ParseUI
+
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.dataSource = self;
+        tableView.delegate = self;
+
+        // Do any additional setup after loading the view.
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}

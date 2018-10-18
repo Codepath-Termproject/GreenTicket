@@ -8,6 +8,8 @@ target 'GroupProject' do
   # Pods for GroupProject
 	pod 'Parse'
     	pod 'AlamofireImage', '~> 3.3'
+        pod 'CameraManager', '~> 3.2'
+        pod ‘ParseUI’
 
   target 'GroupProjectTests' do
     inherit! :search_paths

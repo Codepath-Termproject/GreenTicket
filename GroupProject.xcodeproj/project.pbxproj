@@ -15,6 +15,8 @@
 		A40E54DD21630979002D14FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40E54DB21630979002D14FE /* LaunchScreen.storyboard */; };
 		A40E54E821630979002D14FE /* GroupProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40E54E721630979002D14FE /* GroupProjectTests.swift */; };
 		A40E54F321630979002D14FE /* GroupProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40E54F221630979002D14FE /* GroupProjectUITests.swift */; };
+		A4CA05442178262600563881 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA05432178262600563881 /* LogInViewController.swift */; };
+		A4CA05462178282D00563881 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA05452178282D00563881 /* HomeViewController.swift */; };
 		A8A345A3441BBE0C7CA5229A /* Pods_GroupProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93D76FC181079B25B03E293B /* Pods_GroupProjectTests.framework */; };
 		DD00D94F7570523B45058195 /* Pods_GroupProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF4A1B390772A03A5EC5BCD /* Pods_GroupProjectUITests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,8 @@
 		A40E54EE21630979002D14FE /* GroupProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroupProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40E54F221630979002D14FE /* GroupProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProjectUITests.swift; sourceTree = "<group>"; };
 		A40E54F421630979002D14FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4CA05432178262600563881 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		A4CA05452178282D00563881 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AAC6173253D0F1D8F871C038 /* Pods-GroupProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroupProject/Pods-GroupProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +147,8 @@
 				A40E54D921630979002D14FE /* Assets.xcassets */,
 				A40E54DB21630979002D14FE /* LaunchScreen.storyboard */,
 				A40E54DE21630979002D14FE /* Info.plist */,
+				A4CA05432178262600563881 /* LogInViewController.swift */,
+				A4CA05452178282D00563881 /* HomeViewController.swift */,
 			);
 			path = GroupProject;
 			sourceTree = "<group>";
@@ -374,7 +380,9 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/CameraManager/CameraManager.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/ParseUI/ParseUI.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -383,7 +391,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CameraManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ParseUI.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -399,6 +409,8 @@
 			files = (
 				A40E54D521630975002D14FE /* ViewController.swift in Sources */,
 				A40E54D321630975002D14FE /* AppDelegate.swift in Sources */,
+				A4CA05442178262600563881 /* LogInViewController.swift in Sources */,
+				A4CA05462178282D00563881 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

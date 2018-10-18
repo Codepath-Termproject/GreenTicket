@@ -7,17 +7,42 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Parse.initialize(
+            with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "myInstagram"
+                configuration.clientKey = "43oknto45nyigo540j213f1mcq"  // set to nil assuming you have not set clientKey
+                configuration.server = "https://myins.herokuapp.com/parse"
+            })
+        )
+        
+        if PFUser.current() != nil {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            // view controller currently being set in Storyboard as default will be overridden
+            
+            window?.rootViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController")
+        }
+        
+        //        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "UserDidLogOut" ), object: nil, queue: OperationQueue.main) {(NSNotification)->Void in //the logout button information is received here
+        //
+        //            print("Inside the change app delegate")
+        //            let storyBoard = UIStoryboard(name : "Main", bundle: nil)
+        //            let viewController = storyBoard.instantiateInitialViewController()
+        //            self.window?.rootViewController = viewController
+        //
+        //        }
         return true
     }
+
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
