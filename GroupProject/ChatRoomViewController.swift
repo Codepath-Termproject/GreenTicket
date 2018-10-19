@@ -1,37 +1,32 @@
 //
-//  HomeViewController.swift
+//  ChatRoomViewController.swift
 //  GroupProject
 //
-//  Created by SiuChun Kung on 10/17/18.
+//  Created by SiuChun Kung on 10/19/18.
 //  Copyright © 2018 SiuChun Kung. All rights reserved.
 //
 
 import UIKit
 import Parse
-import ParseUI
-
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ChatRoomViewController: UIViewController {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
+ 
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
     
+    var post : PFObject? = nil
     @IBOutlet weak var tableView: UITableView!
     
-
+    @IBOutlet weak var chatMessageField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self;
-        tableView.delegate = self;
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onSend(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
