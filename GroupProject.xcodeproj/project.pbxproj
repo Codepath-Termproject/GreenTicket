@@ -105,6 +105,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BD85A3F217AA39B00B7DF57 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4FA84842179C5CE004C64E8 /* ChatRoomViewController.swift */,
+				A4CA05432178262600563881 /* LogInViewController.swift */,
+				A4CA05452178282D00563881 /* HomeViewController.swift */,
+				A455E14721784DCF00309076 /* Showtime.swift */,
+				A455E1492178774800309076 /* DetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		2DAE1DA8B3B541B1971E72C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +165,7 @@
 		A40E54D121630975002D14FE /* GroupProject */ = {
 			isa = PBXGroup;
 			children = (
+				0BD85A3F217AA39B00B7DF57 /* ViewController */,
 				A455E1442178349100309076 /* Cell */,
 				A455E141217830C900309076 /* Model */,
 				A40E54D221630975002D14FE /* AppDelegate.swift */,
@@ -161,11 +174,6 @@
 				A40E54D921630979002D14FE /* Assets.xcassets */,
 				A40E54DB21630979002D14FE /* LaunchScreen.storyboard */,
 				A40E54DE21630979002D14FE /* Info.plist */,
-				A4CA05432178262600563881 /* LogInViewController.swift */,
-				A4FA84842179C5CE004C64E8 /* ChatRoomViewController.swift */,
-				A4CA05452178282D00563881 /* HomeViewController.swift */,
-				A455E14721784DCF00309076 /* Showtime.swift */,
-				A455E1492178774800309076 /* DetailViewController.swift */,
 			);
 			path = GroupProject;
 			sourceTree = "<group>";
