@@ -216,7 +216,7 @@
                         <outlet property="captionField" destination="xdt-t0-Bqb" id="bpR-eq-8GD"/>
                         <outlet property="tableView" destination="IvJ-vF-GAY" id="gT5-lG-fcz"/>
                         <outlet property="uploadImage" destination="lzq-tv-JvH" id="RdV-YR-To4"/>
-                        <segue destination="xId-qz-bd6" kind="presentation" identifier="chatroomSegue" id="fFW-AL-Lu3"/>
+                        <segue destination="xId-qz-bd6" kind="show" identifier="chatroomSegue" id="fFW-AL-Lu3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
