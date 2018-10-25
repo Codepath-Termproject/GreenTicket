@@ -10,9 +10,7 @@ import UIKit
 import Parse
 class ChatRoomViewController: UIViewController {
     
- 
-    
-    
+
     var post : PFObject? = nil
     @IBOutlet weak var tableView: UITableView!
     

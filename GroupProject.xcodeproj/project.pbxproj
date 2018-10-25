@@ -15,6 +15,7 @@
 		A40E54DD21630979002D14FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40E54DB21630979002D14FE /* LaunchScreen.storyboard */; };
 		A40E54E821630979002D14FE /* GroupProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40E54E721630979002D14FE /* GroupProjectTests.swift */; };
 		A40E54F321630979002D14FE /* GroupProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40E54F221630979002D14FE /* GroupProjectUITests.swift */; };
+		A444A60921813D7D004DE628 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444A60821813D7D004DE628 /* Chat.swift */; };
 		A455E143217830ED00309076 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A455E142217830ED00309076 /* Post.swift */; };
 		A455E146217834C400309076 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A455E145217834C400309076 /* PostTableViewCell.swift */; };
 		A455E14821784DCF00309076 /* Showtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A455E14721784DCF00309076 /* Showtime.swift */; };
@@ -66,6 +67,7 @@
 		A40E54EE21630979002D14FE /* GroupProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroupProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40E54F221630979002D14FE /* GroupProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupProjectUITests.swift; sourceTree = "<group>"; };
 		A40E54F421630979002D14FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A444A60821813D7D004DE628 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		A455E142217830ED00309076 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A455E145217834C400309076 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		A455E14721784DCF00309076 /* Showtime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Showtime.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				A455E142217830ED00309076 /* Post.swift */,
+				A444A60821813D7D004DE628 /* Chat.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				A4CA05442178262600563881 /* LogInViewController.swift in Sources */,
 				A4CA05462178282D00563881 /* HomeViewController.swift in Sources */,
 				A4FA84872179DC96004C64E8 /* ChatTableViewCell.swift in Sources */,
+				A444A60921813D7D004DE628 /* Chat.swift in Sources */,
 				A455E143217830ED00309076 /* Post.swift in Sources */,
 				A455E146217834C400309076 /* PostTableViewCell.swift in Sources */,
 				A455E14A2178774800309076 /* DetailViewController.swift in Sources */,

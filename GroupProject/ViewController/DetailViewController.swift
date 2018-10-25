@@ -18,7 +18,9 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let post = post {
-            
+            //authorLabel.text = (instagramPost["author"] as! PFUser).username! as String
+            let username = (post["author"] as! PFUser).username! as String
+            self.navigationItem.title = username
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MMM-dd"
             let myString = formatter.string(from: post.createdAt!)
