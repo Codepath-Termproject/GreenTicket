@@ -20,9 +20,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
-    
     @IBOutlet weak var timestampLabel: UILabel!
-
     @IBOutlet weak var favoriteCount: UILabel!
     @IBOutlet weak var heartBtn: UIButton!
     @IBOutlet weak var replyBtn: UIButton!

@@ -7,11 +7,28 @@
 //
 
 import UIKit
+import Parse
+import ParseUI
+import AlamofireImage
 
 class ChatTableViewCell: UITableViewCell {
     
     
-
+    @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var chat: UITextView!
+    
+    
+    var chatRoom: PFObject!{
+        didSet{
+            chat.text = (chatRoom["caption"] as! PFUser).username! as String
+            profilePic.af_setImage(withURL: URL(string: "https://api.tumblr.com/v2/blog/humansofnewyork.tumblr.com/avatar")!)
+            profilePic.clipsToBounds = true
+            profilePic.layer.cornerRadius = 7;
+            
+       
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
