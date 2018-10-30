@@ -7,6 +7,7 @@ target 'GroupProject' do
 
   # Pods for GroupProject
 	pod 'Parse'
+        pod 'AFNetworking'
     	pod 'AlamofireImage', '~> 3.3'
         pod 'CameraManager', '~> 4.3'
             pod 'ParseUI'
