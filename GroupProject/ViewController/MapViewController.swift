@@ -8,27 +8,82 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class MapViewController: UIViewController,  UINavigationControllerDelegate, LocationsViewControllerDelegate, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
-    var annotations: [PhotoAnnotation] = []
-    var capturedPhoto: UIImage?
+  //  var annotations: [PhotoAnnotation] = []
+  //  var capturedPhoto: UIImage?
+    
+    let locationManager = CLLocationManager()
+  
+    
+    @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //set locationManager
+        locationManager.delegate = self;
+        locationManager.distanceFilter = kCLLocationAccuracyNearestTenMeters;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+
+        //set mapview
+        mapView.delegate = self
+        mapView.showsUserLocation = true
+        mapView.userTrackingMode = .follow
+        
+        //test data
+        setupData()
+        
+    }
+    
+   
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        //ask users to get the root
+        if CLLocationManager.authorizationStatus() == .notDetermined{
+            locationManager.requestAlwaysAuthorization()
+        }
+        
+        //if user didn't agree
+        else if CLLocationManager.authorizationStatus() == .denied{
+          // showAlert("Location services were previously denied")
+            print("Location services were previously denied")
+        
+        }
+        
+        //if user agree
+        else if CLLocationManager.authorizationStatus() == .authorizedAlways{
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func setupData(){
+        //check if it is success
+        if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self){
+            let title = "Lorrenzillo's"
+            let coordinate = CLLocationCoordinate2DMake(37.783333, -122.416667)
+            let regionRadius = 300.0
+            
+            //propetices
+            let region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude), radius: regionRadius, identifier: title)
+            locationManager.startMonitoring(for: region)
+        }
     }
     
 
-    @IBOutlet weak var mapView: MKMapView!{
+   /* @IBOutlet weak var mapView: MKMapView!{
         didSet{
             let sfRegion = MKCoordinateRegionMake(CLLocationCoordinate2DMake(37.783333, -122.416667),
                                                   MKCoordinateSpanMake(0.1, 0.1))
             mapView.setRegion(sfRegion, animated: false)
             mapView.delegate = self
         }
-    }
+    }*/
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
