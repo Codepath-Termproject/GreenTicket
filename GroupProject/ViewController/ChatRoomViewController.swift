@@ -18,8 +18,10 @@ class ChatRoomViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = PFUser.current()?.username
 
-        // Do any additional setup after loading the view.
+
     }
     
     @IBAction func onSend(_ sender: Any) {

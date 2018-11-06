@@ -87,7 +87,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if let error = error {
                 print(error.localizedDescription)
             } else {
-                print("Successful loggout")
+                let user = PFUser.current() ?? nil
+                print("Successful logout")
+                print(user as Any)
+                
                 self.performSegue(withIdentifier: "logoutSegue", sender: nil)
                 
             }
@@ -153,27 +156,39 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     
-    @IBAction func toChatRoom(_ sender: Any) {
-        self.performSegue(withIdentifier: "chatroomSegue", sender: nil)
+    @IBAction func toReply(_ sender: Any) {
+         self.performSegue(withIdentifier: "replySegue", sender: sender)
+        
     }
     
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if let cell = sender as? UITableViewCell {
-        if let indexPath = tableView.indexPath(for: cell){
+       
+            if let cell = sender as? UITableViewCell {
+            if let indexPath = tableView.indexPath(for: cell){
             let post = posts[indexPath.row]
             let detailViewController = segue.destination as! DetailViewController
             detailViewController.post = post
             }
-        } else if segue.identifier == "chatroomSegue"{
-            if let cell = sender as? UITableViewCell {
-            if let indexPath = tableView.indexPath(for: cell){
-                let post = posts[indexPath.row]
-                let detailViewController = segue.destination as! ChatRoomViewController
-                detailViewController.post = post
+        }
+        if segue.identifier == "replySegue"{
+            var indexPath: NSIndexPath!
+            if let button = sender as? UIButton {
+                if let superview = button.superview {
+                    if let cell = superview.superview as? PostTableViewCell {
+                        indexPath = tableView.indexPath(for: cell) as NSIndexPath?
+                    }
                 }
-        }
-        }
+            }
+            // get the indexpath for the given cell
+            // get the movie
+            let post = self.posts[(indexPath!.row)]
+            // get the detail view controller we segue to
+            let vc = segue.destination as! ReplyViewController
+            // add to the dictionary in the custom class
+            vc.post = post
+            }
         
     }
     
