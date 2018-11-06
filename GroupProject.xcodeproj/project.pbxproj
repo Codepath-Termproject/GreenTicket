@@ -13,6 +13,7 @@
 		0BD4340F2181631C00F7B77A /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD4340E2181631C00F7B77A /* LocationCell.swift */; };
 		3BF0D607D0E9F25FEA3A0E9E /* Pods_GroupProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A05102E9F795231A6AB881F /* Pods_GroupProject.framework */; };
 		59F4C9B2218FA0110083C5CF /* ReplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F4C9B1218FA0110083C5CF /* ReplyViewController.swift */; };
+		642506F921915A8D00C18F58 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642506F821915A8D00C18F58 /* ProfileViewController.swift */; };
 		A40E54D321630975002D14FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40E54D221630975002D14FE /* AppDelegate.swift */; };
 		A40E54D821630975002D14FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A40E54D621630975002D14FE /* Main.storyboard */; };
 		A40E54DA21630979002D14FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A40E54D921630979002D14FE /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		41907124898E0E5492492776 /* Pods-GroupProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroupProjectUITests/Pods-GroupProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4ADACC3BF2B13AEF48491EB5 /* Pods-GroupProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroupProjectTests/Pods-GroupProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		59F4C9B1218FA0110083C5CF /* ReplyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyViewController.swift; sourceTree = "<group>"; };
+		642506F821915A8D00C18F58 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7A05102E9F795231A6AB881F /* Pods_GroupProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroupProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D76FC181079B25B03E293B /* Pods_GroupProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroupProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40E54CF21630975002D14FE /* GroupProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,7 @@
 				0BD4340821815A3B00F7B77A /* MapViewController.swift */,
 				0BD4340C218161A200F7B77A /* LocationsViewController.swift */,
 				59F4C9B1218FA0110083C5CF /* ReplyViewController.swift */,
+				642506F821915A8D00C18F58 /* ProfileViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -364,15 +367,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-GroupProjectTests-checkManifestLockResult.txt",
 			);
@@ -386,15 +385,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-GroupProjectUITests-checkManifestLockResult.txt",
 			);
@@ -408,15 +403,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-GroupProject-checkManifestLockResult.txt",
 			);
@@ -430,10 +421,8 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GroupProject/Pods-GroupProject-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-GroupProject/Pods-GroupProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
@@ -444,8 +433,6 @@
 				"${BUILT_PRODUCTS_DIR}/ParseUI/ParseUI.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
@@ -458,7 +445,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GroupProject/Pods-GroupProject-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GroupProject/Pods-GroupProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -474,6 +461,7 @@
 				A40E54D321630975002D14FE /* AppDelegate.swift in Sources */,
 				A4CA05442178262600563881 /* LogInViewController.swift in Sources */,
 				0BD4340F2181631C00F7B77A /* LocationCell.swift in Sources */,
+				642506F921915A8D00C18F58 /* ProfileViewController.swift in Sources */,
 				A4CA05462178282D00563881 /* HomeViewController.swift in Sources */,
 				A4FA84872179DC96004C64E8 /* ChatTableViewCell.swift in Sources */,
 				A444A60921813D7D004DE628 /* Chat.swift in Sources */,
@@ -658,6 +646,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GroupProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -676,6 +665,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GroupProject/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -87,7 +87,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if let error = error {
                 print(error.localizedDescription)
             } else {
-                print("Successful loggout")
+                let user = PFUser.current() ?? nil
+                print("Successful logout")
+                print(user as Any)
+                
                 self.performSegue(withIdentifier: "logoutSegue", sender: nil)
                 
             }

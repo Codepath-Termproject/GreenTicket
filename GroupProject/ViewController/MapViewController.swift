@@ -92,30 +92,8 @@ class MapViewController: UIViewController,  UINavigationControllerDelegate, Loca
         return annotationView
     }
     
-    
-    /**
-     This method receives input from the camera button upon being clicked and then presents the camera/photo library
-     - Parameter sender: The Camera Button that will be clicked on this view controller when the user wants to take a picture
-     
-     */
     @IBAction func didPressCameraButton(_ sender: Any) {
-        performSegue(withIdentifier: "locationSegue", sender: nil)
     }
-    /**
-     This method keeps the capturedPhoto taken from UIImagePicker and sets the PhotoMapViewController's capturedPhoto to be the
-     edited image.
-     */
-    /*func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [String : Any]) {
-        // Get the image captured by the UIImagePickerController
-        // originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
-        // Do something with the images (based on your use case)
-        capturedPhoto = editedImage
-        // Dismiss UIImagePickerController to go back to your original view controller
-        dismiss(animated: true, completion: nil)
-        performSegue(withIdentifier: "tagSegue", sender: self)
-    }*/
     
     
     // MARK: - Navigation
