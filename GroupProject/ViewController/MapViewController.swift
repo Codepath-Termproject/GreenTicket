@@ -85,11 +85,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             let restaurantAnnotation = MKPointAnnotation()
             restaurantAnnotation.coordinate = coordinate
             restaurantAnnotation.title = "\(title)"
-            mapView.addAnnotation(restaurantAnnotation)
+            //mapView.addAnnotation(restaurantAnnotation)
             
             //create a circle to represent the range of region
             let circle = MKCircle(center: coordinate, radius: regionRadius)
-            mapView.add(circle)
+            //mapView.add(circle)
         }
         else{
             print("System can't track regions")
