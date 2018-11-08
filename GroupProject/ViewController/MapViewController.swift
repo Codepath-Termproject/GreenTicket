@@ -17,6 +17,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     let locationManager = CLLocationManager()
   
+    var monitoredRegions: Dictionary<String, NSDate> = [:]
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -37,7 +38,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         //test data
         setupData()
-        
     }
     
    
@@ -52,7 +52,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         //if user didn't agree
         else if CLLocationManager.authorizationStatus() == .denied{
           // showAlert("Location services were previously denied")
-            print("Location services were previously denied")
+            //use UIAlertController to show some information
+            //print("Location services were previously denied")
+            let alert = UIAlertController(title: " ", message: "Location services were previously denied", preferredStyle: UIAlertControllerStyle.alert)
+            
+            // Add action buttons to the alert
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            // Present the alert to the view
+            self.present(alert, animated: true, completion: nil)
         
         }
         
@@ -65,13 +73,83 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func setupData(){
         //check if it is success
         if CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self){
-            let title = "Lorrenzillo's"
-            let coordinate = CLLocationCoordinate2DMake(37.783333, -122.416667)
-            let regionRadius = 300.0
+            let title = "San Francisco State University"
+            let coordinate = CLLocationCoordinate2DMake(37.723081, -122.476008)
+            let regionRadius = 50.0
             
             //propetices
             let region = CLCircularRegion(center: CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude), radius: regionRadius, identifier: title)
             locationManager.startMonitoring(for: region)
+            
+            //create annotation
+            let restaurantAnnotation = MKPointAnnotation()
+            restaurantAnnotation.coordinate = coordinate
+            restaurantAnnotation.title = "\(title)"
+            mapView.addAnnotation(restaurantAnnotation)
+            
+            //create a circle to represent the range of region
+            let circle = MKCircle(center: coordinate, radius: regionRadius)
+            mapView.add(circle)
+        }
+        else{
+            print("System can't track regions")
+        }
+    }
+    
+    //draw circle
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let circleRenderer = MKCircleRenderer(overlay: overlay)
+        circleRenderer.strokeColor = UIColor.red
+        circleRenderer.lineWidth = 1.0
+        return circleRenderer
+        
+    }
+    
+    func showAlert(Title: String, Message: String) {
+        let alert = UIAlertController(title: Title, message: Message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    //when the user enter a region
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        showAlert(Title: "enter \(region.identifier)", Message: "enter successfully")
+        
+        //record the enter time
+        monitoredRegions[region.identifier] = NSDate()
+    }
+
+    //when the user exit a region
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        showAlert(Title: "enter \(region.identifier)", Message: "exit successfully")
+        
+        //exit time
+        monitoredRegions.removeValue(forKey: region.identifier)
+    }
+    
+    //update region
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        updateRegions()
+    }
+    
+    //function updateRegions
+    func updateRegions()
+    {
+        let regionMaxVisiting = 10.0
+        var regionsToDelete: [String] = []
+        
+        for regionIdentifier in monitoredRegions.keys{
+            
+            //3.
+            if NSDate().timeIntervalSince(monitoredRegions[regionIdentifier]! as Date) > regionMaxVisiting {
+                showAlert(Title: "", Message: "Thanks for visiting our place")
+                
+                regionsToDelete.append(regionIdentifier)
+            }
+        }
+        
+        for regionIdentifier in regionsToDelete{
+            monitoredRegions.removeValue(forKey: regionIdentifier)
         }
     }
     
@@ -89,10 +167,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         super.didReceiveMemoryWarning()
     }
     
-    @IBOutlet weak var cameraButton: UIButton!
+   // @IBOutlet weak var cameraButton: UIButton!
     
     
-    func locationsPickedLocation(controller: LocationsViewController, latitude: NSNumber, longitude: NSNumber) {
+    /*func locationsPickedLocation(controller: LocationsViewController, latitude: NSNumber, longitude: NSNumber) {
         let locationCoordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
         //var image = controller
         // let annotation = MKPointAnnotation()
@@ -163,6 +241,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             vc.delegate = self
         }
         
-    }
+    }*/
     
 }
