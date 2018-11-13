@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B85FCE72194F14F007AC56E /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B85FCE62194F14F007AC56E /* MapsViewController.swift */; };
+		0BBA6F78219AA32000A7376F /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA6F77219AA32000A7376F /* LocationSearchTable.swift */; };
 		0BD4340921815A3B00F7B77A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD4340821815A3B00F7B77A /* MapViewController.swift */; };
 		0BD4340B21815B8800F7B77A /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD4340A21815B8800F7B77A /* Map.swift */; };
 		0BD4340D218161A200F7B77A /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD4340C218161A200F7B77A /* LocationsViewController.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B85FCE62194F14F007AC56E /* MapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewController.swift; sourceTree = "<group>"; };
+		0BBA6F77219AA32000A7376F /* LocationSearchTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		0BD4340821815A3B00F7B77A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0BD4340A21815B8800F7B77A /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		0BD4340C218161A200F7B77A /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 				0BD4340C218161A200F7B77A /* LocationsViewController.swift */,
 				59F4C9B1218FA0110083C5CF /* ReplyViewController.swift */,
 				642506F821915A8D00C18F58 /* ProfileViewController.swift */,
+				0B85FCE62194F14F007AC56E /* MapsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				A455E142217830ED00309076 /* Post.swift */,
 				A444A60821813D7D004DE628 /* Chat.swift */,
 				0BD4340A21815B8800F7B77A /* Map.swift */,
+				0BBA6F77219AA32000A7376F /* LocationSearchTable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,6 +309,7 @@
 				TargetAttributes = {
 					A40E54CE21630975002D14FE = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 					A40E54E221630979002D14FE = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -458,6 +465,7 @@
 				A455E14821784DCF00309076 /* Showtime.swift in Sources */,
 				59F4C9B2218FA0110083C5CF /* ReplyViewController.swift in Sources */,
 				0BD4340B21815B8800F7B77A /* Map.swift in Sources */,
+				0BBA6F78219AA32000A7376F /* LocationSearchTable.swift in Sources */,
 				A40E54D321630975002D14FE /* AppDelegate.swift in Sources */,
 				A4CA05442178262600563881 /* LogInViewController.swift in Sources */,
 				0BD4340F2181631C00F7B77A /* LocationCell.swift in Sources */,
@@ -465,6 +473,7 @@
 				A4CA05462178282D00563881 /* HomeViewController.swift in Sources */,
 				A4FA84872179DC96004C64E8 /* ChatTableViewCell.swift in Sources */,
 				A444A60921813D7D004DE628 /* Chat.swift in Sources */,
+				0B85FCE72194F14F007AC56E /* MapsViewController.swift in Sources */,
 				0BD4340921815A3B00F7B77A /* MapViewController.swift in Sources */,
 				0BD4340D218161A200F7B77A /* LocationsViewController.swift in Sources */,
 				A455E143217830ED00309076 /* Post.swift in Sources */,
@@ -636,6 +645,7 @@
 			baseConfigurationReference = AAC6173253D0F1D8F871C038 /* Pods-GroupProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GroupProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -645,6 +655,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "g--.GroupProject";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -655,6 +666,7 @@
 			baseConfigurationReference = 3308B6448DF7D4B2C3618A50 /* Pods-GroupProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GroupProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

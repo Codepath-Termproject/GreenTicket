@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -36,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+ 
 
 
 
