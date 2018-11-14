@@ -1,29 +1,31 @@
 # GroupProject
 # Term Project - *GreenTicket*
 
-**GreenTicket** is a movies app using the [Fandango].
+**GreenTicket** is a APP of tickets selling.
 
-Time spent: **X** hours spent in total
+Time spent: **50** hours spent in total
 
 ## User Stories
 
 The following **required** user stories are complete:
 
-- [ ] User sees app icon in home screen and styled launch screen 
-- [ ] User can sign up and sign in to the login screen 
-- [ ] User can scroll through a list of people who want to sell or buy tickets
-- [ ] User can "Pull to refresh" the list of ticket
-- [ ] User sees the location of each ticket
-- [ ] User can search for other type of ticket 
-- [ ] User can check the price of the ticket people offer
-- [ ] User can can the details of the tickets
-- [ ] User sees an alert when there's a networking error 
-- [ ] User can communicate with other users to talk about buying ticket or selling ticket
-- [ ] Username of chat author is displayed in each chat message
+- [x] User sees app icon in home screen and styled launch screen 
+- [x] User can sign up and sign in to the login screen 
+- [x] User can scroll through a list of people who want to sell or buy tickets
+- [x] User can "Pull to refresh" the list of ticket
+- [x] User can see the details of the tickets
+- [x] User sees an alert when there's a networking error 
+- [x] User can communicate with other users to talk about buying ticket or selling ticket
+- [x] Username of chat author is displayed in each chat message
+- [x] User can use map to find their destination they want to pick up or enjoy movie
+- [x] User can get a route for arriving their destination to theater or somewhere
+- [x] User can post their tickets and write comments through post
+- [x] User can like user's posts
 
 The following **stretch** user stories are implemented:
 
-- [ ] Expand or contract the cell layout as needed to show the chat message author (user) if it exists 
+- [x] Expand or contract the cell layout as needed to show the chat message author (user) if it exists 
+- [ ] User can post with location
 - [ ] User can use the camera to take photo with tickets
 
 The following **additional** user stories are implemented:
