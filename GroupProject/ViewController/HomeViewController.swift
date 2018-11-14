@@ -172,23 +172,23 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             detailViewController.post = post
             }
         }
-        if segue.identifier == "replySegue"{
-            var indexPath: NSIndexPath!
-            if let button = sender as? UIButton {
-                if let superview = button.superview {
-                    if let cell = superview.superview as? PostTableViewCell {
-                        indexPath = tableView.indexPath(for: cell) as NSIndexPath?
-                    }
-                }
-            }
-            // get the indexpath for the given cell
-            // get the movie
-            let post = self.posts[(indexPath!.row)]
-            // get the detail view controller we segue to
-            let vc = segue.destination as! ReplyViewController
-            // add to the dictionary in the custom class
-            vc.post = post
-            }
+//        if segue.identifier == "replySegue"{
+//            var indexPath: NSIndexPath!
+//            if let button = sender as? UIButton {
+//                if let superview = button.superview {
+//                    if let cell = superview.superview as? PostTableViewCell {
+//                        indexPath = tableView.indexPath(for: cell) as NSIndexPath?
+//                    }
+//                }
+//            }
+//            // get the indexpath for the given cell
+//            // get the movie
+//            let post = self.posts[(indexPath!.row)]
+//            // get the detail view controller we segue to
+//            let vc = segue.destination as! ReplyViewController
+//            // add to the dictionary in the custom class
+//            vc.post = post
+//            }
         
     }
     

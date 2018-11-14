@@ -12,6 +12,11 @@ target 'GroupProject' do
         pod 'CameraManager', '~> 4.3'
             pod 'ParseUI'
           pod 'MBProgressHUD'
+          pod 'Firebase/Database'
+          pod 'Firebase/Auth'
+          pod 'Firebase/Storage'
+          pod 'Firebase/Core'
+          pod 'JSQMessagesViewController'
 
   target 'GroupProjectTests' do
     inherit! :search_paths

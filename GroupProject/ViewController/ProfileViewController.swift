@@ -8,15 +8,20 @@
 
 import UIKit
 import Parse
+import AlamofireImage
 
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var profilePic: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         username.text = PFUser.current()?.username
+        profilePic.af_setImage(withURL: URL(string: "https://api.tumblr.com/v2/blog/humansofnewyork.tumblr.com/avatar")!)
+        profilePic.clipsToBounds = true
+        profilePic.layer.cornerRadius = 40;
     }
 
     override func didReceiveMemoryWarning() {

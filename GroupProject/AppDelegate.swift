@@ -8,7 +8,7 @@
 
 import UIKit
 import Parse
-
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         Parse.initialize(
             with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
                 configuration.applicationId = "GreenTicket"
@@ -26,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
         
         if let currentUser = PFUser.current() {
-            //print("Welcome back \(currentUser.username!) 😀")
+            print("Welcome back \(currentUser.username!) 😀")
             
             // TODO: Load Chat view controller and set as root view controller
             

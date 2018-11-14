@@ -15,6 +15,9 @@
 		0BD4340F2181631C00F7B77A /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD4340E2181631C00F7B77A /* LocationCell.swift */; };
 		0BFAF9DF2192C75E00617DD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BFAF9DE2192C75E00617DD3 /* Main.storyboard */; };
 		3BF0D607D0E9F25FEA3A0E9E /* Pods_GroupProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A05102E9F795231A6AB881F /* Pods_GroupProject.framework */; };
+		591FFF8D219BAC0A00EB04DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591FFF8C219BAC0A00EB04DB /* Constants.swift */; };
+		591FFF8F219BB0C300EB04DB /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591FFF8E219BB0C200EB04DB /* ChatViewController.swift */; };
+		591FFF91219BB2B900EB04DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 591FFF90219BB2B900EB04DB /* GoogleService-Info.plist */; };
 		59F4C9B2218FA0110083C5CF /* ReplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F4C9B1218FA0110083C5CF /* ReplyViewController.swift */; };
 		642506F921915A8D00C18F58 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642506F821915A8D00C18F58 /* ProfileViewController.swift */; };
 		A40E54D321630975002D14FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40E54D221630975002D14FE /* AppDelegate.swift */; };
@@ -66,6 +69,9 @@
 		3308B6448DF7D4B2C3618A50 /* Pods-GroupProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-GroupProject/Pods-GroupProject.release.xcconfig"; sourceTree = "<group>"; };
 		41907124898E0E5492492776 /* Pods-GroupProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroupProjectUITests/Pods-GroupProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4ADACC3BF2B13AEF48491EB5 /* Pods-GroupProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroupProjectTests/Pods-GroupProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		591FFF8C219BAC0A00EB04DB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		591FFF8E219BB0C200EB04DB /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		591FFF90219BB2B900EB04DB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		59F4C9B1218FA0110083C5CF /* ReplyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyViewController.swift; sourceTree = "<group>"; };
 		642506F821915A8D00C18F58 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7A05102E9F795231A6AB881F /* Pods_GroupProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroupProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +140,7 @@
 				59F4C9B1218FA0110083C5CF /* ReplyViewController.swift */,
 				642506F821915A8D00C18F58 /* ProfileViewController.swift */,
 				0B85FCE62194F14F007AC56E /* MapsViewController.swift */,
+				591FFF8E219BB0C200EB04DB /* ChatViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -191,6 +198,7 @@
 				A455E141217830C900309076 /* Model */,
 				0BFAF9DE2192C75E00617DD3 /* Main.storyboard */,
 				A40E54D221630975002D14FE /* AppDelegate.swift */,
+				591FFF90219BB2B900EB04DB /* GoogleService-Info.plist */,
 				A40E54D921630979002D14FE /* Assets.xcassets */,
 				A40E54DB21630979002D14FE /* LaunchScreen.storyboard */,
 				A40E54DE21630979002D14FE /* Info.plist */,
@@ -230,6 +238,7 @@
 		A455E1442178349100309076 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				591FFF8C219BAC0A00EB04DB /* Constants.swift */,
 				A4FA84862179DC96004C64E8 /* ChatTableViewCell.swift */,
 				A455E145217834C400309076 /* PostTableViewCell.swift */,
 				0BD4340E2181631C00F7B77A /* LocationCell.swift */,
@@ -347,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A40E54DD21630979002D14FE /* LaunchScreen.storyboard in Resources */,
+				591FFF91219BB2B900EB04DB /* GoogleService-Info.plist in Resources */,
 				A40E54DA21630979002D14FE /* Assets.xcassets in Resources */,
 				0BFAF9DF2192C75E00617DD3 /* Main.storyboard in Resources */,
 			);
@@ -429,15 +439,21 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GroupProject/Pods-GroupProject-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-GroupProject/Pods-GroupProject-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/CameraManager/CameraManager.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 				"${BUILT_PRODUCTS_DIR}/ParseUI/ParseUI.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -446,13 +462,19 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CameraManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ParseUI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GroupProject/Pods-GroupProject-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GroupProject/Pods-GroupProject-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -463,6 +485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A455E14821784DCF00309076 /* Showtime.swift in Sources */,
+				591FFF8D219BAC0A00EB04DB /* Constants.swift in Sources */,
 				59F4C9B2218FA0110083C5CF /* ReplyViewController.swift in Sources */,
 				0BD4340B21815B8800F7B77A /* Map.swift in Sources */,
 				0BBA6F78219AA32000A7376F /* LocationSearchTable.swift in Sources */,
@@ -479,6 +502,7 @@
 				A455E143217830ED00309076 /* Post.swift in Sources */,
 				A455E146217834C400309076 /* PostTableViewCell.swift in Sources */,
 				A455E14A2178774800309076 /* DetailViewController.swift in Sources */,
+				591FFF8F219BB0C300EB04DB /* ChatViewController.swift in Sources */,
 				A4FA84852179C5CE004C64E8 /* ChatRoomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
