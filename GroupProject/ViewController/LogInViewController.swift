@@ -20,12 +20,13 @@ class LogInViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
     @IBAction func logInButton(_ sender: Any) {
         let username = usernameField.text ?? ""
         let password = passwordField.text ?? ""
         
-        if username != "" && password != ""{
-            PFUser.logInWithUsername(inBackground: username, password: password) { (user: PFUser?, error: Error?) in
+        PFUser.logInWithUsername(inBackground: username, password: password) { (user: PFUser?, error: Error?) in
                 if let error = error {
                     print("User log in failed: \(error.localizedDescription)")
                     let alertController = UIAlertController(title: "Try again", message: error.localizedDescription, preferredStyle: .alert)
@@ -44,7 +45,6 @@ class LogInViewController: UIViewController {
                     // display view controller that needs to shown after successful login
                 }
             }
-        }
     }
     
     @IBAction func signUpButton(_ sender: Any) {
@@ -52,7 +52,6 @@ class LogInViewController: UIViewController {
         newUser.username = usernameField.text
         newUser.password = passwordField.text
         
-        if usernameField.text != "" && passwordField.text != "" {
             newUser.signUpInBackground { (success: Bool, error: Error?) in
                 if let error = error {
                     print(error.localizedDescription)
@@ -73,7 +72,6 @@ class LogInViewController: UIViewController {
                     // manually segue to logged in view
                 }
             }
-        }
     }
     
     /*
