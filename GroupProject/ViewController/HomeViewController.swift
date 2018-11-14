@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import MBProgressHUD
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -20,6 +20,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var captionField: UITextView!
     @IBOutlet weak var uploadImage: UIImageView!
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if captionField.textColor == UIColor.lightGray {
+            captionField.text = nil
+            captionField.textColor = UIColor.black
+        }
+    }
     
 
     override func viewDidLoad() {
@@ -31,7 +38,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.delegate = self
         tableView.dataSource = self
         fetchPost()
-        // Do any additional setup after loading the view.
+        
+        captionField.delegate = self
+        captionField.isEditable = true
+        
+        captionField.text = "Write something..."
+        captionField.textColor = UIColor.lightGray
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
