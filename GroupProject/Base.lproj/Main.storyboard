@@ -63,7 +63,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="caption" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBk-tC-IEq">
-                                                    <rect key="frame" x="69" y="283" width="42.5" height="15"/>
+                                                    <rect key="frame" x="69" y="283" width="42.5" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -537,7 +537,14 @@
                                 <state key="normal" title="Bookmark"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ed-vk-1Y0">
-                                <rect key="frame" x="246" y="431" width="57" height="30"/>
+                                <rect key="frame" x="233" y="431" width="70" height="30"/>
+                                <state key="normal" title="Messages"/>
+                                <connections>
+                                    <segue destination="0Ll-Uv-k1Z" kind="show" id="Qma-d4-10U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGn-7n-18C">
+                                <rect key="frame" x="159" y="503" width="57" height="30"/>
                                 <state key="normal" title="Settings"/>
                             </button>
                         </subviews>
@@ -547,21 +554,26 @@
                             <constraint firstItem="ckf-Cf-hXs" firstAttribute="centerX" secondItem="xS1-vP-uSQ" secondAttribute="centerX" id="4xp-4h-44S"/>
                             <constraint firstItem="BWD-gI-AaN" firstAttribute="top" secondItem="0ed-vk-1Y0" secondAttribute="bottom" constant="157" id="5eI-Sa-X4T"/>
                             <constraint firstItem="akY-5W-HgK" firstAttribute="top" secondItem="AAZ-Os-N6F" secondAttribute="bottom" constant="20" id="84q-6C-Ppm"/>
+                            <constraint firstItem="BWD-gI-AaN" firstAttribute="top" secondItem="eB7-y1-hSR" secondAttribute="bottom" constant="157" id="AXc-x4-Ehf"/>
                             <constraint firstItem="akY-5W-HgK" firstAttribute="centerX" secondItem="xS1-vP-uSQ" secondAttribute="centerX" id="Avi-wh-ujV"/>
-                            <constraint firstItem="BWD-gI-AaN" firstAttribute="top" secondItem="eB7-y1-hSR" secondAttribute="bottom" constant="157" id="ClN-uH-Z7f"/>
-                            <constraint firstItem="eB7-y1-hSR" firstAttribute="leading" secondItem="xS1-vP-uSQ" secondAttribute="leading" constant="63" id="Kve-qY-DxS"/>
+                            <constraint firstAttribute="trailing" secondItem="TGn-7n-18C" secondAttribute="trailing" constant="159" id="FYF-cx-1WB"/>
                             <constraint firstItem="Ocl-aP-p3r" firstAttribute="top" secondItem="HEL-kc-nIi" secondAttribute="bottom" constant="8" id="N0f-v8-FQr"/>
+                            <constraint firstItem="BWD-gI-AaN" firstAttribute="top" secondItem="TGn-7n-18C" secondAttribute="bottom" constant="85" id="NNS-La-mvd"/>
                             <constraint firstItem="Ocl-aP-p3r" firstAttribute="leading" secondItem="xS1-vP-uSQ" secondAttribute="leading" constant="177" id="ZdN-Am-RMd"/>
+                            <constraint firstItem="eB7-y1-hSR" firstAttribute="leading" secondItem="xS1-vP-uSQ" secondAttribute="leading" constant="63" id="aDS-IV-LXQ"/>
+                            <constraint firstItem="0ed-vk-1Y0" firstAttribute="leading" secondItem="eB7-y1-hSR" secondAttribute="trailing" constant="100" id="als-o9-J8K"/>
                             <constraint firstItem="ckf-Cf-hXs" firstAttribute="centerX" secondItem="HEL-kc-nIi" secondAttribute="centerX" id="c07-bB-SKp"/>
                             <constraint firstItem="HEL-kc-nIi" firstAttribute="top" secondItem="akY-5W-HgK" secondAttribute="bottom" constant="16" id="cxL-jN-1zx"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ocl-aP-p3r" secondAttribute="trailing" constant="177" id="dIe-iZ-paZ"/>
-                            <constraint firstItem="0ed-vk-1Y0" firstAttribute="leading" secondItem="eB7-y1-hSR" secondAttribute="trailing" constant="113" id="edK-gV-2JI"/>
+                            <constraint firstItem="TGn-7n-18C" firstAttribute="leading" secondItem="xS1-vP-uSQ" secondAttribute="leading" constant="159" id="dfF-8A-gDe"/>
                             <constraint firstItem="ckf-Cf-hXs" firstAttribute="top" secondItem="Ocl-aP-p3r" secondAttribute="bottom" constant="25" id="h1c-da-cev"/>
                             <constraint firstAttribute="trailing" secondItem="0ed-vk-1Y0" secondAttribute="trailing" constant="72" id="ive-QC-yyn"/>
+                            <constraint firstItem="TGn-7n-18C" firstAttribute="top" secondItem="ckf-Cf-hXs" secondAttribute="bottom" constant="228" id="vvB-Qa-sys"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XXl-QE-iC0"/>
                     <connections>
+                        <outlet property="message" destination="0ed-vk-1Y0" id="l7B-ID-kif"/>
                         <outlet property="profilePic" destination="akY-5W-HgK" id="nzt-cb-IbP"/>
                         <outlet property="username" destination="ckf-Cf-hXs" id="N32-vF-MAD"/>
                     </connections>
@@ -859,7 +871,7 @@
         <image name="reply-icon" width="18" height="13"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="a4f-mO-J0b"/>
+        <segue reference="Qma-d4-10U"/>
         <segue reference="nQE-sH-DmL"/>
         <segue reference="bUG-23-TOA"/>
         <segue reference="6gV-jx-4zr"/>
