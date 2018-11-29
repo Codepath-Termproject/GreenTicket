@@ -25,8 +25,7 @@ The following **required** user stories are complete:
 The following **stretch** user stories are implemented:
 
 - [x] Expand or contract the cell layout as needed to show the chat message author (user) if it exists 
-- [ ] User can post with location
-- [ ] User can use the camera to take photo with tickets
+- [x] User can use the camera to take photo with tickets
 
 The following **additional** user stories are implemented:
 
